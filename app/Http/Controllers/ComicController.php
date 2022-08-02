@@ -51,7 +51,14 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        //
+          // leggo i dati associati all'id ricevuto
+          $comic = Comic::findOrFail($id);
+
+          // Dietro le quinte il find fa questo
+          // $faq = Faq::where("id", $id)->first();
+  
+          // ritorniamo la view dello show
+          return view("comics.show", compact("comic"));
     }
 
     /**
