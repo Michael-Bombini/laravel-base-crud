@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       
@@ -28,21 +30,13 @@
         }
 
 
-        .main-menu:hover,
-        nav.main-menu.expanded {
-            width: 250px;
-            overflow: visible;
-        }
+   
 
         .main-menu {
             background: #212121;
+            width: 100%
             border-right: 1px solid #e5e5e5;
-            position: absolute;
-            top: 0;
-            bottom: 0;
             height: 100%;
-            left: 0;
-            width: 60px;
             overflow: hidden;
             -webkit-transition: width .05s linear;
             transition: width .05s linear;
@@ -138,15 +132,10 @@
         .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
         .dashboard-page nav.dashboard-menu ul li.active a {
             color: #fff;
-            background-color: #5fa2db;
+            background-color: #5fdba5;
+            
         }
 
-        .area {
-            float: left;
-            background: #e2e2e2;
-            width: 100%;
-            height: 100%;
-        }
 
         @font-face {
             font-family: 'Titillium Web';
@@ -158,7 +147,23 @@
 </head>
 
 <body>
-    @include('partials.sidebar')
+
+
+
+
+        @include('partials.sidebar')
+
+
+<div class="p-4 container">
+    @yield('main')
+</div>
+
+        
+
+    
+  
+    
+</div>
 </body>
 
 </html>
