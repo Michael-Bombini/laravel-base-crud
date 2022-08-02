@@ -42,7 +42,24 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // richiedo i dati ottenuti tramite il form 
+        //creo una nuova istanza di Comic e gli assegno i dati del comic appena aggiunto
+        //per poi salvarli successivamente a database 
+
+        $data = $request->all();
+
+        $newComic = new Comic();
+
+        $newComic->fill($data);
+        $newComic->save();
+
+        /**
+         * Questa funzione crea una nuova istanza di Faq, esegue il fill() ed infie il save()
+         */
+        // $newFaq = Faq::create($data);
+
+        // Come risultato deve fare un redirect sulla rotta show dell'elemento appena creato
+        return redirect()->route("comics.show", $newComic->id);
     }
 
     /**
