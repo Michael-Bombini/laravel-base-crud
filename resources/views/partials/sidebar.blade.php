@@ -19,6 +19,16 @@
             </a>
 
         </li>
+
+        <li>
+            <a href="{{ route('comics.create')}}">
+                <i class="fa fa-plus fa-2x"></i>
+                <span class="nav-text">
+                    Add New Comic
+                </span>
+            </a>
+
+        </li>
        
     </ul>
 
