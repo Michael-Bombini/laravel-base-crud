@@ -12,8 +12,15 @@
     <style>
       
         
+        
 
         @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
+        .comic-img {
+            max-width: 206px;
+            max-height: 304px;
+        }
+
 
         .fa-2x {
             font-size: 2em;
