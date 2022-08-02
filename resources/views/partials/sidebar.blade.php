@@ -1,7 +1,7 @@
 <nav class="main-menu">
     <ul>
         <li>
-            <a href="">
+            <a href="/">
                 <i class="fa fa-home fa-2x"></i>
                 <span class="nav-text">
                     Home
@@ -11,7 +11,7 @@
         </li>
 
         <li>
-            <a href="">
+            <a href="{{ route('comics.index')}}">
                 <i class="fa fa-book fa-2x"></i>
                 <span class="nav-text">
                     Comics
