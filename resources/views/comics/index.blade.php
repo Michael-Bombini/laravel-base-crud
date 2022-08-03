@@ -30,6 +30,7 @@
                     <td>{{$comic["price"]}}</td>
                     <td>{{$comic["sale_date"]}}</td>
                     <td><a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success"><i class="fa-solid fa-arrow-pointer"></i></a></td>
+                    <td><a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a></td>
                     <td>
                       <form action="{{ route('comics.destroy' , $comic->id)}}" method="POST">
                       @csrf
