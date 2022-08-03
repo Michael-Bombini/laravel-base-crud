@@ -64,7 +64,7 @@
                    and you will have to recreate <br> by using the Add New Comic option 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close <i class="fa-solid fa-arrow-up-left"></i> </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
